@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+    <style>
+        body {
+            background-color: rgb(164, 238, 91);
+            font: normal 15pt Times;
+
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>De onde você é?</h1>
+    Diga o seu país:<input type= "name" name= "txtpa" id= "txtpa">
+    <input type = "button" value= "Buscar" onclick= "verificar()">
+    <div id="res"></div>
+    <script>
+        function verificar () {
+            var txtv = document.querySelector('input#txtpa')
+            var res = document.querySelector('div#res')
+            var nac = (txtv.value)
+            res.innerHTML = `<p>Seu país é <strong>${nac}</strong>!</p>`
+            if (nac == 'Brasil') {
+                res.innerHTML += '<p>Bem vindo à sua casa!</p>'
+            } else {
+                res.innerHTML += '<p>Seja bem vindo, turista, e divirta-se!</p>'
+            }
+        }
+
+    </script>
+    
+</body>
+</html>

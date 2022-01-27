@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Idade</title>
+</head>
+<body>
+    <h1> Idade</h1>
+    Indique sua idade: <input type = "number" name = "yr" id = "yr">
+    <input type = "button" value = "Verificar" onclick = "ir()">
+    <div id = "res" ></div>
+    <script>
+        function ir () {
+            var txt1 = document.querySelector ('input#yr')
+            var end = document.querySelector ('div#end')
+            var fin = Number (txt1.value)
+            res.innerHTML = `Sua idade é ${fin}`
+            if (fin >= 18) {
+                res.innerHTML += '<p>Pode prosseguir.</p>' 
+            } else { 
+                res.innerHTML += '<p><strong>Atenção</strong>! Você não tem permissão para continuar!</p>'
+            } 
+        }
+    </script>
+</body>
+</html>
